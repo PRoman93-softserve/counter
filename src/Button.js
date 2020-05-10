@@ -1,21 +1,13 @@
 import React from 'react';
 import './App.css';
 
-function CountPanel(props) {
+function Button(props) {
 
     return (
-
-        <>
-            <div className={props.countMax}>{props.count}</div>
-            <button disabled={props.countDisabled}
-                    onClick={props.onInkrement}>{props.ink}</button>
-            <button onClick={props.onReset}>{props.reset}</button>
-            <button onClick={props.onSetVisible}>{props.set}</button>
-        </>
-
-
+        <button onClick={props.onClick}
+                disabled={props.disabled}
+                className={'button'}>{props.title}</button>
     )
-
 }
 
-export default CountPanel;
+export default Button;

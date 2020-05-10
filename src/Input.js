@@ -2,40 +2,17 @@ import React from 'react';
 import './App.css';
 import Button from "./Button";
 
-function SettingsPanel(props) {
+function Input(props) {
 
     return (
         <>
-            <div className='count'>
-            <div>
-                <span>maxValue</span>
+                <span>{props.title}</span>
                 <input className={props.inputError}
-                       onChange={props.onMaxChangeValue}
+                       onChange={props.changeValue}
                        type="number"
-                       value={props.maxValue}/>
-            </div>
-            <div >
-                <span>minValue</span>
-                <input className={props.inputError}
-                       onChange={props.onMinChangeValue}
-                       type="number"
-                       value={props.minValue}/>
-            </div>
-            </div>
-            <div className='buttonBorder'>
-                <Button disabled={props.setButtonDisabled}
-                        onClick={props.onCountVisible}
-                        title={'set'}/>
-                {/*<button disabled={props.setButtonDisabled}*/}
-                {/*        onClick={props.onCountVisible}>*/}
-                {/*    {props.set}*/}
-                {/*</button>*/}
-            </div>
+                       value={props.value}/>
         </>
-
-
     )
-
 }
 
-export default SettingsPanel;
+export default Input;
